@@ -1,24 +1,92 @@
 
 <style>
+    html {
+        background-color: #f7f7f7;
+    }
+
+    header,
+    body {
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    header {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    /* apply it to a stages insterd of #nav-link, refer to 'https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link' */
+    a:hover,
+    a:visited,
+    a:link,
+    a:active {
+        text-decoration: none;
+        color: #808080;
+        font-size: x-large;
+    }
+
+    .project {
+        display: flex;
+    }
+
+    @media (min-width: 800px) {
+        .project {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+            height: auto;
+        }
+    }
 
 </style>
 
 <!DOCTYPE html>
+
+<header>
 <nav id="navbar">
+    <a href="#welcome-section" class="nav-link">Welcome</a>
+    <a href="#projects" class="nav-link">Projects</a>
     <a href="#contact" class="nav-link">Contact</a>
 </nav>
+</header>
+<body>
 <section id="welcome-section">
     <h1>Hey I am Alice Wu</h1>
 </section>
 <section id="projects">
-    <div class="project-tile">
+    <div>
+        <a href="https://aliceohly.github.io/FreeCodeCamp-Projects-Responsive-Web-Design/Survey-Form.html" target="_blank">
+            <div class="project">
+                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture">
+                <p class="project-tile">Survey Form</p>
+            </div>
+        </a>
+    </div>
+    <div>
+        <a href="https://aliceohly.github.io/FreeCodeCamp-Projects-Responsive-Web-Design/Product-Landing-Page.html" target="_blank">
+            <div class="project">
+                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture">
+                <p class="project-tile">Product Landing Page</p>
+            </div>
+        </a>
+    </div>
+    <div>
         <a href="https://codepen.io/aliceohly/pen/KKyZaYr" target="_blank">
-            <img src="" alt="">
-            <p>Survey Form</p>
+            <div class="project">
+                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture">
+                <p class="project-tile">Survey Form</p>
+            </div>
         </a>
     </div>
 </section>
 <section id="contact">
-
+    <div id="profile-links">
+        <a href="#">LinkedIn</a>
+    </div>
 </section>
+</body>
 </html>
