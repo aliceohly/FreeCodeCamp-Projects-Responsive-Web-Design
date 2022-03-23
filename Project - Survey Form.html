@@ -1,0 +1,154 @@
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" type="text/css">
+
+<style>
+
+main {
+  padding: 2% 20% 5% 20%;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: x-large;
+}
+
+#BLpicture {
+    display: block;
+    width: 100%;
+    margin: auto;
+    height: auto;
+}
+
+#title, #description, #thanks {
+    text-align: center;
+}
+
+#title {
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'Pacifico', cursive;
+}
+
+#survey-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    line-height: 1.8;
+}
+
+#name-label, #email-label, #number-label {
+    font-weight: bold;
+}
+
+#name, #email, #number {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.userDetail {
+    display: flex;
+    flex-direction: column;
+}
+
+#dropdown {
+    width: 100%;
+    height: auto;
+    font-size: inherit;
+    font-family: inherit;
+    margin-top: 2%;
+}
+
+#textarea {
+    width: 100%;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#submit {
+    margin-top: 2%;
+    background-color: #D1EDF6;
+    border-radius: 5%;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#submit:hover {
+    background-color: aquamarine;
+}
+
+</style>
+
+<!DOCTYPE html>
+<html>
+<body>
+<img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="bucket list picture" id="BLpicture">
+
+<main>
+<h1 id="title">Bucket List Survey Form</h1>
+<p id="description">Thank you for your time for filling this survey form.</p>
+<p id="thanks">Thanks | 谢谢 | Merci | Gracias | شكرا | ありがとう</p>
+
+<form action="" id="survey-form">
+    <div class="userDetail">
+    <label for="name" id="name-label">Name</label>
+    <input type="text" id="name" placeholder="Your full name e.g. Alice Wu" required>
+    <label for="email" id="email-label">Email</label>
+    <input type="email" id="email" placeholder="Your email address" pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required>
+    <label for="number" id="number-label">Age</label>
+    <input type="number" id="number" placeholder="Your age" min="12" max="110" required>
+    </div>
+    <div class="BLQ1">
+        <p><strong>Do you have a bucket list?</strong></p>
+        <div>
+        <input type="radio" name="haveBL-notHaveBL" id="radioHaveBL" value="haveBL"/>
+        <label for="radioHaveBL">That would be a YES!</label>
+        </div>
+        <div>
+        <input type="radio" name="haveBL-notHaveBL" id="radioNotHaveBL" value="notHaveBL"/>
+        <label for="radioNotHaveBL">Nope but I would love to. </label>
+        </div>
+        </div>
+    </div>
+    <div class="BLQ2"> 
+        <p><strong>Tick me if you would like me to be in your bucket list</strong></p>
+        <input type="checkbox" name="BLitems" id="travel" value="travel" />
+        <label for="travel">Travel all around the world</label><br>
+        <input type="checkbox" name="BLitems" id="newLanguage" value="newLanguage" />
+        <label for="newLanguage">Learn a new language</label><br>
+        <input type="checkbox" name="BLitems" id="newJob" value="newJob" />
+        <label for="newJob">Try a profession in a different field</label><br>
+        <input type="checkbox" name="BLitems" id="marathon" value="marathon" />
+        <label for="marathon">Run a marathon</label><br>
+        <input type="checkbox" name="BLitems" id="extremesport" value="extremesport" />
+        <label for="extremesport">Do an extreme sport</label><br>
+        <input type="checkbox" name="BLitems" id="surprise" value="surprise" />
+        <label for="surprise">Give a heartfelt surprise to someone</label><br>
+    </div>
+    <br>
+    <div class="BLQ3">
+        <label for="travelCountryPick"><strong>Say 'Travel all around the world' is on your bucket list, which country you would like to go the most?</strong></label>
+        <br>
+        <select name="countryList" id="dropdown">
+            <option value="Australia">Australia</option>
+            <option value="Egypt">Egypt</option>
+            <option value="France">France</option>
+            <option value="India">India</option>
+            <option value="Italy">Italy</option>
+            <option value="Japan">Japan</option>
+            <option value="Thailand">Thailand</option>
+            <option value="USA">USA</option>
+        </select>
+    </div>
+    <div>
+        <p>
+            <strong>I would love to try something different. Please list down other items that
+            would make you feel exciting. 😊</strong>
+        </p>
+        <label for="textarea"></label>
+        <textarea name="extraBLItems" id="textarea" cols="30" rows="10">e.g. Fly in a hot-air balloon</textarea>
+    </div>
+    <button type="submit" id="submit">Summit</button>
+</form>
+</main>
+</body>
+</html>
+
