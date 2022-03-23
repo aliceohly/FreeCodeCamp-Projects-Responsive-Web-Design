@@ -1,0 +1,363 @@
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" type="text/css">
+
+<style>
+    html {
+        background-color: #f7f7f7;
+    }
+
+    header,
+    body {
+        font-family: 'Ubuntu', sans-serif;
+    }
+
+    header {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+
+    #logo {
+        width: 25vw;
+        height: auto;
+        max-width: 350px;
+    }
+
+    /* apply it to a stages insterd of #nav-link, refer to 'https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link' */
+    a:hover,
+    a:visited,
+    a:link,
+    a:active {
+        text-decoration: none;
+        color: #808080;
+        font-size: x-large;
+    }
+
+    #features {
+        box-sizing: border-box;
+    }
+
+    #offer-message {
+        text-align: center;
+        margin-top: 200px;
+        font-family: 'Pacifico', cursive;
+    }
+
+    @media (min-width: 1000px) {
+        #header {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #nav-bar {
+            display: flex;
+            justify-content: space-between;
+            width: 30%;
+            margin: auto 3% auto auto;
+        }
+    }
+
+    @media (max-width: 1000px) {
+        #header {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #logo {
+            margin: auto;
+        }
+
+        #nav-bar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            margin: auto;
+        }
+    }
+
+    @media (max-width: 1400px) {
+
+        .icon {
+            width: 0;
+            height: 0;
+        }
+
+        .feature h1 {
+            text-align: center;
+            font-size: x-large;
+        }
+
+        .feature p {
+            text-align: center;
+            font-size: large;
+        }
+
+
+        #pricing {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+        .activities {
+            margin-top: 3%;
+        }
+
+        .activities h2 {
+            font-size: large;
+        }
+
+    }
+
+
+    @media (min-width: 1400px) {
+        .feature {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr;
+        }
+
+        .icon {
+            width: 50%;
+            max-width: 100px;
+            grid-area: 1/4/1/5;
+            margin: auto;
+        }
+
+        .description {
+            grid-area: 1/5/1/10;
+        }
+
+        .feature p {
+            font-size: x-large;
+        }
+
+
+        #pricing {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .activities {
+            margin-top: 3%;
+        }
+    }
+
+    #video {
+        display: block;
+        width: 720;
+        height: 540;
+        margin: 5vh auto 1vh auto;
+    }
+
+    .activities {
+        min-width: 400px;
+        border: solid;
+        border-width: thin;
+        border-radius: 1%;
+        width: 30%;
+        height: auto;
+    }
+
+    .activity-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url("https://ak.picdn.net/shutterstock/videos/18181447/thumb/1.jpg");
+        background-color: #dfe3ee;
+        height: 2em;
+        color: white;
+    }
+
+    .activity-price {
+        text-align: center;
+    }
+
+    .activity-description {
+        text-align: center;
+    }
+
+    .activity-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 3em;
+    }
+
+    .activity-button button {
+        background-color: #008CBA;
+        border: none;
+        padding: 0.5em 1.5em;
+        border-radius: 5%;
+        font-size: medium;
+        color: white;
+    }
+
+    .activity-button button:hover {
+        background-color: #4CAF50;
+    }
+
+    #email-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #email-form h1 {
+        margin-top: 2.5em;
+        margin: 2em auto 0.4em auto;
+    }
+
+    #email-form p {
+        margin: 0 auto 0.2em auto;
+    }
+
+    #form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #form #email {
+        width: 50%;
+        height: 3em;
+        font-size: large;
+        margin: 1em auto;
+        padding-left: 0.5em;
+    }
+
+    #form #submit {
+        background-color: #008CBA;
+        border: none;
+        padding: 0.5em 1.5em;
+        border-radius: 5%;
+        font-size: medium;
+        color: white;
+        margin: 0.5em auto;
+    }
+
+    #form #submit:hover {
+        background-color: #4CAF50;
+    }
+</style>
+
+<!DOCTYPE html>
+<html>
+<header id="header">
+    <img src="https://wmfeimages.s3.amazonaws.com/wp-content/uploads/2017/03/10160311/659383134_orig.png"
+        alt="your-logo-goes-here" id="logo">
+    <nav id="nav-bar">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#video" class="nav-link">Video</a>
+        <a href="#pricing" class="nav-link">Pricing</a>
+    </nav>
+</header>
+
+<body>
+    <h1 id="offer-message"> We can offer you ... </h1>
+    <div id="features">
+        <div class="feature">
+            <img class="icon" src="https://gcwabesuniverse.files.wordpress.com/2015/01/logo_yolo_bwwith-tag.jpg"
+                alt="yolo-icon" id="abc">
+            <div class="description">
+                <h1>Once in a lifetime experience</h1>
+                <p>The unique adrenaline rush, putting yourself at the mercy of nature and pushing the limits only
+                    contribute to the whole experience.</p>
+                <!-- Source: https://identity-mag.com/6-extreme-sports-you-have-to-try-once-in-your-lifetime/-->
+            </div>
+        </div>
+        <div class="feature">
+            <img class="icon"
+                src="https://thumbs.dreamstime.com/b/buyer-full-cart-solid-icon-person-full-grocery-cart-vector-illustration-isolated-white-shopping-glyph-buyer-133083399.jpg"
+                alt="price-match-icon">
+            <div class="description">
+                <h1>Price match</h1>
+                <p>We offer the best-guaranteed service with exceptional discounts. Contact one of our friendly customer
+                    service member for price matching.</p>
+            </div>
+        </div>
+        <div class="feature">
+            <img class="icon"
+                src="https://cdn4.iconfinder.com/data/icons/digital-banking-5/64/feedback-rating-satisfaction-customer-review-512.png"
+                alt="a-five-star-icon">
+            <div class="description">
+                <h1>5 stars review</h1>
+                <p>We are proud that we are rated as a 5-star travel agent in New Zealand. We try our best to make sure
+                    every customer is enjoying our 100% pure New Zealand activities. </p>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <!-- Youtube URL format: https://www.youtube.com/embed/VIDEO_ID -->
+        <iframe id="video" src="https://www.youtube.com/embed/mAUVY7B_fXo" frameborder="0"></iframe>
+    </div>
+
+    <div id="pricing">
+        <div class="activities" id="bungee-jump">
+            <div class="activity-header">
+                <h2 class="activity-name">BUNGEE JUMP</h2>
+            </div>
+            <div class="activity-description">
+                <p class="activity-price">FROM NZD $150 pp</p>
+                <p>Up to 134 meters</p>
+                <p>Up to 8.5s free fall</p>
+                <p>Water-touch jump available (Taupo Bungy Jump 47m)</p>
+            </div>
+            <div class="activity-button">
+                <button>SELECT</button>
+            </div>
+        </div>
+
+        <div class="activities" id="canyon-swing">
+            <div class="activity-header">
+                <h2 class="activity-name">CANYON-SWING</h2>
+            </div>
+            <div class="activity-description">
+                <p class="activity-price">FROM NZD $200 pp</p>
+                <p>Up to 109 meters</p>
+                <p>Fly solo or in tandem</p>
+                <p>The fastest and biggest swing (Nevis Swing Queenstown)</p>
+            </div>
+            <div class="activity-button">
+                <button>SELECT</button>
+            </div>
+        </div>
+
+        <div class="activities" id="white-water-rafting">
+            <div class="activity-header">
+                <h2 class="activity-name">WHITE-WATER-RAFTING</h2>
+            </div>
+            <div class="activity-description">
+                <p class="activity-price">FROM NZD $170 pp</p>
+                <p>Up to a hair-raising seven metre drop</p>
+                <p>Different grades of rafting available</p>
+                <p>The tallest commercially raftable waterfall (Kaituna River)</p>
+            </div>
+            <div class="activity-button">
+                <button>SELECT</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="email-form">
+        <h1>Book your next vacation with Alice?</h1>
+        <p>Contact us today for your next adventure. One of our friendly consultant will get in touch with you shortly.
+        </p>
+        <p>Happy travel! ☺</p>
+        <!-- The email is submitted to a static page (using this mock URL: https://www.freecodecamp.com/email-submit). -->
+        <form action=" https://www.freecodecamp.com/email-submit" id="form">
+            <input type="email" name="email" id="email" placeholder="please enter your email"
+                pattern="/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/" required />
+            <button type="submit" id="submit">SUBMIT</button>
+        </form>
+    </section>
+</body>
+
+</html>
