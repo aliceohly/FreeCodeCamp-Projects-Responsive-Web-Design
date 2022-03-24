@@ -18,6 +18,10 @@
         display: flex;
         justify-content: flex-end;
     }
+
+    body {
+        margin: 5% 15%;
+    }
     
     /* apply it to a stages insterd of #nav-link, refer to 'https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link' */
     a:hover,
@@ -29,18 +33,19 @@
         font-size: x-large;
     }
 
-    .project {
-        display: flex;
+  @media (min-width: 1600px) {
+    body {
+      margin-left: 20%;
+      margin-right: 20%;
     }
+  }
 
-    @media (min-width: 800px) {
-        .project {
-            display: flex;
-            flex-direction: column;
-            width: 25%;
-            height: auto;
-        }
+  @media (min-width: 1200px) {
+    body {
+      margin-left: 10%;
+      margin-right: 10%;
     }
+  }
 
 </style>
 
@@ -58,29 +63,37 @@
     <h1>Hey I am Alice Wu</h1>
 </section>
 <section id="projects">
-    <div>
-        <a href="https://aliceohly.github.io/FreeCodeCamp-Projects-Responsive-Web-Design/Survey-Form.html" target="_blank">
-            <div class="project">
-                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture">
-                <p class="project-tile">Survey Form</p>
-            </div>
-        </a>
+    <div class="row gx-4">
+    <div class="col-lg-4 col-md-6">
+        <div class="project">
+            <a href="https://aliceohly.github.io/FreeCodeCamp-Projects-Responsive-Web-Design/Survey-Form.html" target="_blank">
+                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture" style="width: 100%"> 
+                <div class="project-tile d-flex flex-col">
+                    <p>Survey Form</p> 
+                </div>    
+            </a>         
+        </div>
     </div>
-    <div>
-        <a href="https://aliceohly.github.io/FreeCodeCamp-Projects-Responsive-Web-Design/Product-Landing-Page.html" target="_blank">
-            <div class="project">
-                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture">
-                <p class="project-tile">Product Landing Page</p>
-            </div>
-        </a>
+    <div class="col-lg-4 col-md-6">
+        <div class="project">
+            <a href="https://aliceohly.github.io/FreeCodeCamp-Projects-Responsive-Web-Design/Survey-Form.html" target="_blank">
+                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture" style="width: 100%"> 
+                <div class="project-tile d-flex flex-col">
+                    <p>Survey Form</p> 
+                </div>    
+            </a>         
+        </div>
     </div>
-    <div>
-        <a href="https://codepen.io/aliceohly/pen/KKyZaYr" target="_blank">
-            <div class="project">
-                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture">
-                <p class="project-tile">Survey Form</p>
-            </div>
-        </a>
+    <div class="col-lg-4 col-md-6">
+        <div class="project">
+            <a href="https://aliceohly.github.io/FreeCodeCamp-Projects-Responsive-Web-Design/Survey-Form.html" target="_blank">
+                <img src="https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg" alt="Bucket List Picture" style="width: 100%"> 
+                <div class="project-tile d-flex flex-col">
+                    <p>Survey Form</p> 
+                </div>    
+            </a>         
+        </div>
+    </div>
     </div>
 </section>
 <section id="contact">
