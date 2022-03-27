@@ -1,5 +1,7 @@
+<!DOCTYPE html>
+<head>
+<html lang="en">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
 <style>
     html {
         background-color: #f7f7f7;
@@ -11,17 +13,15 @@
     }
 
     header {
-        position: fixed;
         top: 0px;
         width: 100%;
         box-sizing: border-box;
         margin: 0;
-        display: flex;
-        justify-content: flex-end;
+        border: solid;
     }
 
-    body {
-        margin: 5% 15%;
+    .container-fluid {
+        border: solid;
     }
 
     /* apply it to a stages insterd of #nav-link, refer to 'https://stackoverflow.com/questions/2789703/remove-blue-underline-from-link' */
@@ -34,16 +34,32 @@
         font-size: x-large;
     }
 
-        @media (min-width: 1800px) {
-        body {
-            margin-left: 20%;
-            margin-right: 20%;
+    #welcome-section {
+      /*Set it to be full screen*/
+      width: 100%;
+      height: 100vh;
+      position: relative;
+    }
+
+    #welcome-section-text {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-size: 80px;
+      font-weight: bold;
+    }
+
+    @media (min-width: 1800px) {
+        .container-fluid {
+
         }
     }
 
 
     .project-bg {
-        height: 300px;
+        height: 400px;
         position: relative;
     }
 
@@ -62,8 +78,7 @@
     }
 </style>
 
-<!DOCTYPE html>
-<div class="container-fluid>
+</head>
 <header>
     <nav id="navbar">
         <a href="#welcome-section" class="nav-link">Welcome</a>
@@ -73,33 +88,36 @@
 </header>
 
 <body>
-    <section id="welcome-section">
-        <h1>Hey I am Alice Wu</h1>
+
+    <section id="welcome-section" style="background: url('https://uhdwallpapers.org/uploads/converted/18/04/06/canyon-sunset-desert-landscape-bullfrog-usa-2880x1620_44594-mm-90.jpg')">
+        <h1 id="welcome-section-text" class="text-center">Hey I am Alice Wu</h1>
     </section>
+
+    <div class="container mt-5">
     <section id="projects">
-            <div class="row gx-4 gy-5">
-                <div class="col-lg-4 col-md-6">
+            <div class="row gx-5 gy-5">
+                <div class="col-xxl-4 col-lg-6">
                     <div class="project-bg" style="background: url('https://www.pandotrip.com/wp-content/uploads/2015/07/Top-10-Kayaking-Norway2-980x653.jpg');">
                         <div class="description-bg">
-                            <h5 class="font-weight-bold">Product Landing Page </h5>
+                            <h1 class="font-weight-bold">Survey Form</h1>
                             <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                 industry. Lorem Ipsum has been the industry's standard dummy</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-xxl-4 col-lg-6">
                     <div class="project-bg" style="background: url('https://www.traveller.com.au/content/dam/images/9/4/3/9/image.related.articleLeadwide.620x349.91gs.png/1237962201423.jpg');">
                         <div class="description-bg">
-                            <h5 class="font-weight-bold">Product Landing Page </h5>
+                            <h1 class="font-weight-bold">Product Landing Page </h1>
                             <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                 industry. Lorem Ipsum has been the industry's standard dummy</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6">
+                <div class="col-xxl-4 col-lg-6">
                     <div class="project-bg" style="background: url('https://www.traveller.com.au/content/dam/images/9/4/3/9/image.related.articleLeadwide.620x349.91gs.png/1237962201423.jpg');">
                         <div class="description-bg">
-                            <h5 class="font-weight-bold">Product Landing Page </h5>
+                            <h1 class="font-weight-bold">Product Landing Page </h1>
                             <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
                                 industry. Lorem Ipsum has been the industry's standard dummy</p>
                         </div>
@@ -107,11 +125,12 @@
                 </div>
             </div>
     </section>
+    </div>
     <section id="contact">
         <div id="profile-links">
             <a href="#">LinkedIn</a>
         </div>
     </section>
 </body>
-</div>
+
 </html>
