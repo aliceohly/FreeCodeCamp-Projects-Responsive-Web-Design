@@ -50,10 +50,36 @@
 
     }
 
-    .project-bg {
+    .project {
         height: 400px;
-        position: relative;
     }
+
+    .project .project-display {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .project:hover {
+        border: dashed;
+        border-color: #7c827c;
+    }
+
+    .project .project-hover {
+        display: none;
+    }
+
+    .project:hover .project-display {
+        display: none;
+    }
+
+    .project:hover .project-hover {
+        display: block;
+        height: 100%;
+        transform: translate(-5%, -5%);
+    }
+
 
     .description-bg {
         background: #17a2b8bf;
@@ -61,7 +87,7 @@
         padding-top: 2em;
         padding-bottom: 2em;
         position: absolute;
-        bottom: 0;
+        bottom: 50%;
         width: 100%;
     }
 
@@ -86,61 +112,67 @@
         <h1 id="welcome-section-text" class="text-center">Hey I am Alice Wu</h1>
     </section>
 
-    <div class="container-fluid" style="margin-top: 80px; padding-left: 2%; padding-right: 2%;">
+    <div class="container-fluid" style="margin-top: 80px; padding-left: 5%; padding-right: 5%;">
     <section id="projects">
             <div class="row gx-5 gy-5">
                 <div class="col-xxl-4 col-lg-6">
-                    <div class="project-bg" style="background-color: #667d65;">
-                        <div class="description-bg">
-                            <h1 class="font-weight-bold">Survey Form</h1>
-                            <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy</p>
-                        </div>
+                    <div class="project">
+                    <div class="project-display" style="background-color: #667d65;">
+                            <h1 class="text-center font-weight-bold" style="color:white;">Survey Form</h1>
+                    </div>
+                    <div class="project-hover" style="background-color: #667d65;">
+                            <h1 class="font-weight-bold">Hello ABC</h1>
+                    </div> 
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-6">
-                    <div class="project-bg" style="background-color: #eec6b6;">
-                        <div class="description-bg">
-                            <h1 class="font-weight-bold">Product Landing Page </h1>
-                            <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy</p>
-                        </div>
+                    <div class="project">
+                    <div class="project-display" style="background-color: #eec6b6;">
+                            <h1 class="text-center font-weight-bold" style="color:white;">Product Landing Page</h1>
+                    </div>
+                    <div class="project-hover" style="background-color: #eec6b6;">
+                            <h1 class="font-weight-bold">Hello ABC</h1>
+                    </div> 
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-6">
-                    <div class="project-bg" style="background-color: #65737d;">
-                        <div class="description-bg">
-                            <h1 class="font-weight-bold">Product Landing Page </h1>
-                            <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy</p>
-                        </div>
+                    <div class="project">
+                    <div class="project-display" style="background-color: #65737d;">
+                            <h1 class="text-center font-weight-bold" style="color:white;">Survey Form</h1>
+                    </div>
+                    <div class="project-hover" style="background-color: #65737d;">
+                            <h1 class="font-weight-bold">Hello ABC</h1>
+                    </div> 
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-6">
-                    <div class="project-bg" style="background-color: #667d65;">
-                        <div class="description-bg">
-                            <h1 class="font-weight-bold">Product Landing Page </h1>
-                            <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy</p>
-                        </div>
+                    <div class="project">
+                    <div class="project-display" style="background-color: #667d65;">
+                            <h1 class="text-center font-weight-bold" style="color:white;">Survey Form</h1>
+                    </div>
+                    <div class="project-hover" style="background-color: #667d65;">
+                            <h1 class="font-weight-bold">Hello ABC</h1>
+                    </div> 
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-6">
-                    <div class="project-bg" style="background-color: #eec6b6;">
-                        <div class="description-bg">
-                            <h1 class="font-weight-bold">Product Landing Page </h1>
-                            <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy</p>
-                        </div>
+                    <div class="project">
+                    <div class="project-display" style="background-color: #eec6b6;">
+                            <h1 class="text-center font-weight-bold" style="color:white;">Survey Form</h1>
+                    </div>
+                    <div class="project-hover" style="background-color: #eec6b6;">
+                            <h1 class="font-weight-bold">Hello ABC</h1>
+                    </div> 
                     </div>
                 </div>
                 <div class="col-xxl-4 col-lg-6">
-                    <div class="project-bg" style="background-color: #65737d;">
-                        <div class="description-bg">
-                            <h1 class="font-weight-bold">Product Landing Page </h1>
-                            <p class="description-text">Lorem Ipsum is simply dummy text of the printing and typesetting
-                                industry. Lorem Ipsum has been the industry's standard dummy</p>
-                        </div>
+                    <div class="project">
+                    <div class="project-display" style="background-color: #65737d;">
+                            <h1 class="text-center font-weight-bold" style="color:white;">Survey Form</h1>
+                    </div>
+                    <div class="project-hover" style="background-color: #65737d;">
+                            <h1 class="font-weight-bold">Hello ABC</h1>
+                    </div> 
                     </div>
                 </div>
             </div>
